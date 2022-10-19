@@ -5,6 +5,7 @@ require 'conexion.php';
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,8 +14,10 @@ require 'conexion.php';
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
+
 <body style="background-color: #E6E6FA;">
     <div class="container text-center">
+    <br>
        <div class="row">
           <form action="app/add.php" method="POST" autocomplete="off">
             <div class="mb-3">
@@ -24,8 +27,7 @@ require 'conexion.php';
                         class="form-control"
                         style="border-color: #ff6666"
                         placeholder="Necesitas agregar una tarea" />
-                        <br>
-
+                    <br>
                     <div class="alert alert-warning alert-dismissible fade show" role="alert">
                         <strong>Campos Vacios!</strong> Asegurate de llenar los campos.
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -34,7 +36,7 @@ require 'conexion.php';
                     <button type="submit" class="btn btn-primary">Agregar Tarea</button>
 
                 <?php }else{ ?>
-                    <br>
+                <br>
                 <input type="text" 
                         name="title" 
                         class="form-control"
@@ -50,14 +52,12 @@ require 'conexion.php';
        ?>
        <div class="row">
             <?php if($todos->rowCount() <= 0){ ?>
-
                 <div class="todo-item">
                     <div class="empty">
                         <img src="img/empty.png" width="100%" />
                         <img src="img/Ellipsis.gif" width="80px">
                     </div>
                 </div>
-
             <?php } ?>
 
             <?php while($todo = $todos->fetch(PDO::FETCH_ASSOC)) { ?>
