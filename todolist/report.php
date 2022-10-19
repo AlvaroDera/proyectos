@@ -33,9 +33,8 @@
         <div class="todo-item">
 
             <h2 class="check"><?php echo $todo['title'] ?></h2>
-            <small>Creado: <?php echo $todo['date_time'] ?></small>
-
-            
+                    <!-- TODO Dando formato a la fecha -->
+                    <small>Creado: <?php echo date("d/m/Y - h:i:a", strtotime($todo['date_time'])) ?></small>
         </div>
         <button type="link" name="tolobby" onclick="parent.location='index.php'">Regresar</button>
         <?php } ?>
