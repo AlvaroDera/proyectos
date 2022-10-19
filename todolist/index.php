@@ -36,7 +36,7 @@ require 'conexion.php';
             <?php if($todos->rowCount() <= 0){ ?>
 
                 <h3 align="center">No hay tareas para mostrar.</h3>
-
+<!--  -->
                 <!-- <div class="todo-item">
                     <div class="empty">
                         <img src="img/f.png" width="100%" />
