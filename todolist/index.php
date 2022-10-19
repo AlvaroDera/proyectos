@@ -13,66 +13,79 @@ require 'conexion.php';
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
-<body>
-    <div class="menu">
-       <div class="agregar">
+<body style="background-color: #E6E6FA;">
+    <div class="container text-center">
+       <div class="row">
           <form action="app/add.php" method="POST" autocomplete="off">
-             <?php if(isset($_GET['mess']) && $_GET['mess'] == 'error'){ ?>
-                <input type="text" 
-                     name="title" 
-                     style="border-color: #ff6666"
-                     placeholder="Necesitas agregar una tarea" />
-              <button type="submit">Agregar &nbsp; <span>&#43;</span></button>
+            <div class="mb-3">
+                <?php if(isset($_GET['mess']) && $_GET['mess'] == 'error'){ ?>
+                    <input type="text" 
+                        name="title" 
+                        class="form-control"
+                        style="border-color: #ff6666"
+                        placeholder="Necesitas agregar una tarea" />
+                        <br>
 
-             <?php }else{ ?>
-              <input type="text" 
-                     name="title" 
-                     placeholder="Agregar una nueva tarea" />
-              <button type="submit">Agregar &nbsp; <span>&#43;</span></button>
-             <?php } ?>
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong>Campos Vacios!</strong> Asegurate de llenar los campos.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Agregar Tarea</button>
+
+                <?php }else{ ?>
+                    <br>
+                <input type="text" 
+                        name="title" 
+                        class="form-control"
+                        placeholder="Agregar una nueva tarea" />
+                <br>
+                <button type="submit" class="btn btn-primary">Agregar Tarea</button>
+                <?php } ?>
+             </div>     
           </form>
        </div>
        <?php 
           $todos = $conn->query("SELECT * FROM todos ORDER BY id DESC");
        ?>
-       <div class="show-todo-section">
+       <div class="row">
             <?php if($todos->rowCount() <= 0){ ?>
 
-                <h3 align="center">No hay tareas para mostrar.</h3>
-
-                <!-- <div class="todo-item">
+                <div class="todo-item">
                     <div class="empty">
-                        <img src="img/f.png" width="100%" />
+                        <img src="img/empty.png" width="100%" />
                         <img src="img/Ellipsis.gif" width="80px">
                     </div>
-                </div> -->
+                </div>
+
             <?php } ?>
 
             <?php while($todo = $todos->fetch(PDO::FETCH_ASSOC)) { ?>
-                <div class="todo-item">
-                    <span id="<?php echo $todo['id']; ?>"
-                          class="remove-to-do">x</span>
-                    <?php if($todo['checked']){ ?> 
-                        <input type="checkbox"
-                               class="check-box"
-                               data-todo-id ="<?php echo $todo['id']; ?>"
-                               checked />
-                        <h2 class="checked"><?php echo $todo['title'] ?></h2>
-                    <?php }else { ?>
-                        <input type="checkbox"
-                               data-todo-id ="<?php echo $todo['id']; ?>"
-                               class="check-box" />
-                        <h2><?php echo $todo['title'] ?></h2>
-                    <?php } ?>
-                    <br>
-                    <!-- <small>Creado:<?php echo $todo['date_time'] ?></small> -->
-                    <!-- TODO Dando formato a la fecha -->
-                    <small>Creado: <?php echo date("d/m/Y - h:i:a", strtotime($todo['date_time'])) ?></small>
+                <div class="card">
+                    <div class="card-body">
+                        <span id="<?php echo $todo['id']; ?>"
+                            class="remove-to-do">x</span>
+                        <?php if($todo['checked']){ ?> 
+                            <input type="checkbox"
+                                class="check-box form-check-input"
+                                data-todo-id ="<?php echo $todo['id']; ?>"
+                                checked />
+                            <h5 class="card-title"><?php echo $todo['title'] ?></h5>
+                        <?php }else { ?>
+                            <input type="checkbox"
+                                data-todo-id ="<?php echo $todo['id']; ?>"
+                                class="check-box form-check-input" />
+                            <h5 class="card-title"><?php echo $todo['title'] ?></h5>
+                        <?php } ?>
+                        <br>
+                        <!-- TODO Dando formato a la fecha -->
+                        <p class="card-text">Creado: <?php echo date("d/m/Y - h:i:a", strtotime($todo['date_time'])) ?></p>
+                    </div>
                 </div>
             <?php } ?>
        </div>
             <!-- TODO Agregando la parte de reportes -->
-            <button type="button" name="report" onclick="parent.location='report.php'">Reporte </button>
+            <button type="button" class="btn btn-outline-info" name="report" onclick="parent.location='report.php'">Reporte </button>
     </div>
 
     <!-- Agregando scripts -->
