@@ -85,6 +85,7 @@ require 'conexion.php';
             <?php } ?>
        </div>
             <!-- TODO Agregando la parte de reportes -->
+            <br>
             <button type="button" class="btn btn-outline-info" name="report" onclick="parent.location='report.php'">Reporte </button>
     </div>
 
