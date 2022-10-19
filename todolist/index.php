@@ -63,6 +63,8 @@ require 'conexion.php';
                 </div>
             <?php } ?>
        </div>
+            <!-- TODO Agregando la parte de reportes -->
+            <button type="button" name="report" onclick="parent.location='report.php'">Reporte </button>
     </div>
 
     <script src="js/jquery-3.2.1.min.js"></script>
