@@ -1,6 +1,8 @@
+<!-- TODO Requerimos la conexion -->
 <?php 
 require 'conexion.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +11,7 @@ require 'conexion.php';
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>To-Do List</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
     <div class="menu">
@@ -72,6 +75,8 @@ require 'conexion.php';
             <button type="button" name="report" onclick="parent.location='report.php'">Reporte </button>
     </div>
 
+    <!-- Agregando scripts -->
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
 
     <script>

@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reporte</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
 <body>
@@ -39,6 +40,9 @@
         <button type="link" name="tolobby" onclick="parent.location='index.php'">Regresar</button>
         <?php } ?>
     </div>
+    
+    <!-- Agregando scripts -->
+    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
