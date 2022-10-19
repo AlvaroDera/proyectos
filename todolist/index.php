@@ -24,7 +24,7 @@ require 'conexion.php';
              <?php }else{ ?>
               <input type="text" 
                      name="title" 
-                     placeholder="Agregar una nueva Tarea" />
+                     placeholder="Agregar una nueva tarea" />
               <button type="submit">Agregar &nbsp; <span>&#43;</span></button>
              <?php } ?>
           </form>
@@ -34,12 +34,15 @@ require 'conexion.php';
        ?>
        <div class="show-todo-section">
             <?php if($todos->rowCount() <= 0){ ?>
-                <div class="todo-item">
+
+                <h3 align="center">No hay tareas para mostrar.</h3>
+
+                <!-- <div class="todo-item">
                     <div class="empty">
                         <img src="img/f.png" width="100%" />
                         <img src="img/Ellipsis.gif" width="80px">
                     </div>
-                </div>
+                </div> -->
             <?php } ?>
 
             <?php while($todo = $todos->fetch(PDO::FETCH_ASSOC)) { ?>
