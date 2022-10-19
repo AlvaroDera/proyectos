@@ -34,7 +34,7 @@ require 'conexion.php';
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Agregar Tarea <span class="material-symbols-rounded">add</span></button>
+                    <button type="submit" class="btn btn-primary">Agregar Tarea</button>
 
                 <?php }else{ ?>
                 <br>
@@ -43,7 +43,7 @@ require 'conexion.php';
                         class="form-control"
                         placeholder="Agregar una nueva tarea" />
                 <br>
-                <button type="submit" class="btn btn-primary">Agregar Tarea<span class="material-symbols-rounded">add</span></button>
+                <button type="submit" class="btn btn-primary">Agregar Tarea</button>
                 <?php } ?>
              </div>     
           </form>
