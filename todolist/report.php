@@ -26,7 +26,7 @@
         <?php if($todos->rowCount() <= 0){ ?>
         <div class="todo-item">
             <div class="empty">
-                <h1>No hay tareas para mostrar.</h1>
+                <h1>No hay tareas para mostrar. </h1>
                 <button type="button" class="btn btn-primary" name="rlobby" onclick="parent.location='index.php'">Agregar una nueva tarea<span class="material-symbols-rounded">add</span></button>
             </div>
         </div>
