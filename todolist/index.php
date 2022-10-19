@@ -52,19 +52,9 @@ require 'conexion.php';
        ?>
        <div class="row">
             <?php if($todos->rowCount() <= 0){ ?>
-<<<<<<< HEAD
 
                 <h3 align="center">No hay tareas para mostrar.</h3>
 
-                <!-- <div class="todo-item">
-=======
-                <div class="todo-item">
->>>>>>> a842af8226d43743a0b4f472377a471da4f69642
-                    <div class="empty">
-                        <img src="img/empty.png" width="100%" />
-                        <img src="img/Ellipsis.gif" width="80px">
-                    </div>
-                </div>
             <?php } ?>
 
             <?php while($todo = $todos->fetch(PDO::FETCH_ASSOC)) { ?>
