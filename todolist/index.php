@@ -59,7 +59,9 @@ require 'conexion.php';
                         <h2><?php echo $todo['title'] ?></h2>
                     <?php } ?>
                     <br>
-                    <small>Creado: <?php echo $todo['date_time'] ?></small> 
+                    <!-- <small>Creado:<?php echo $todo['date_time'] ?></small> -->
+                    <!-- TODO Dando formato a la fecha -->
+                    <small>Creado: <?php echo date("d/m/Y - h:i:a", strtotime($todo['date_time'])) ?></small>
                 </div>
             <?php } ?>
        </div>
