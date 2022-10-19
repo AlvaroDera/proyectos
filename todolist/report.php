@@ -12,6 +12,8 @@
     <title>Reporte</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 </head>
 
 <body style="background-color: #E6E6FA;">
@@ -25,7 +27,7 @@
         <div class="todo-item">
             <div class="empty">
                 <h1>No hay tareas para mostrar.</h1>
-                <button type="button" class="btn btn-primary" name="rlobby" onclick="parent.location='index.php'">Agregar una nueva tarea</button>
+                <button type="button" class="btn btn-primary" name="rlobby" onclick="parent.location='index.php'">Agregar una nueva tarea<span class="material-symbols-rounded">add</span></button>
             </div>
         </div>
         <?php } ?>
@@ -42,7 +44,9 @@
 
         <?php } ?>
         <br>
-        <button type="link" class="btn btn-outline-info" name="tolobby" onclick="parent.location='index.php'">Regresar</button>
+        <button type="link" class="btn btn-outline-info" name="tolobby" onclick="parent.location='index.php'"><span class="material-symbols-rounded">
+arrow_back
+</span>Regresar</button>
     </div>
 
     <!-- Agregando scripts -->

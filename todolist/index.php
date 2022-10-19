@@ -13,6 +13,7 @@ require 'conexion.php';
     <title>To-Do List</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body style="background-color: #E6E6FA;">
@@ -33,7 +34,7 @@ require 'conexion.php';
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Agregar Tarea</button>
+                    <button type="submit" class="btn btn-primary">Agregar Tarea <span class="material-symbols-rounded">add</span></button>
 
                 <?php }else{ ?>
                 <br>
@@ -42,7 +43,7 @@ require 'conexion.php';
                         class="form-control"
                         placeholder="Agregar una nueva tarea" />
                 <br>
-                <button type="submit" class="btn btn-primary">Agregar Tarea</button>
+                <button type="submit" class="btn btn-primary">Agregar Tarea <span class="material-symbols-rounded">add</span></button>
                 <?php } ?>
              </div>     
           </form>
@@ -83,7 +84,9 @@ require 'conexion.php';
        </div>
             <!-- TODO Agregando la parte de reportes -->
             <br>
-            <button type="button" class="btn btn-outline-info" name="report" onclick="parent.location='report.php'">Reporte </button>
+            <button type="button" class="btn btn-outline-info" name="report" onclick="parent.location='report.php'">Reporte <span class="material-symbols-rounded">
+description
+</span></button>
     </div>
 
     <!-- Agregando scripts -->
