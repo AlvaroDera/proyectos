@@ -55,7 +55,7 @@ require 'conexion.php';
 <<<<<<< HEAD
 
                 <h3 align="center">No hay tareas para mostrar.</h3>
-<!--  -->
+
                 <!-- <div class="todo-item">
 =======
                 <div class="todo-item">
